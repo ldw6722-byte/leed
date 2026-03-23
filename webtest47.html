@@ -1,12 +1,12 @@
 <html>
 
-<head>   
+<head>
     <meta charset="utf-8" />
 </head>
 
 <body>
     <script type="text/javascript">
-        function Mypost() {
+        function MyPosition() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(CurPosition, ErrorCallback);
             }
@@ -14,9 +14,9 @@
         function CurPosition(position) {
             var lat = position.coords.latitude;
             var lng = position.coords.longitude;
-            document.getElementById("result").innerHTML = "위도:" + lat + "경도" + lng
+            document.getElementById("result").innerHTML = "위도:" + lat + " 경도: " + lng;
         }
-        
+
         function ErrorCallback(error) {
             switch (error.code) {
                 case error.PERMISSION_DENIED:
@@ -36,4 +36,3 @@
 </body>
 
 </html>
-    

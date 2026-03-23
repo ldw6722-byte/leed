@@ -1,8 +1,0 @@
-<html>
-<body>
-    <canvas id="myCanvas" width="600" height="400" style="border
-
-    </cnavas>
-    <script type="text/javascript">
-        var ctx = document.getElementById("myCanvas");
-        var myContext = ctx.getContext
