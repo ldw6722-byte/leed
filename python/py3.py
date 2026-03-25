@@ -1,8 +1,8 @@
 A = int(input())
 B = int(input())
 
-print(A * (B % 10))        
-print(A * ((B // 10) % 10))  
-print(A * (B // 100))
-print(A * B)
+print(A * int(B[2]))
+print(A * int(B[1]))
+print(A * int(B[0]))
+print(A * int(B))
 
