@@ -1,4 +1,4 @@
-yellow_card = 0
+yellow_card = 1
 foul = True
 if foul:
     yellow_card+=1
