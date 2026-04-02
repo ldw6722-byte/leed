@@ -1,12 +1,12 @@
 import json
 from pathlib import Path
-from step_2_1 import OUTPUT_DIR
+from step_2_1 import OUT_DIR
 
-OUT_2_3 = OUTPUT_DIR / f"{Path(__file__).stem}.json"
+OUT_2_3 = OUT_DIR / f"{Path(__file__).stem}.json"
 
 def dump_dirnames(base_dir: Path) -> None:
     dirs = []
-    for path in  base_dir.iterdir():
+    for path in base_dir.iterdir():
         if path.is_dir():
             dirs.append(path.as_posix())
     dirs_sorted = sorted(dirs)
