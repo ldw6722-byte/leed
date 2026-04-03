@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from step_1 import IN_DIR, OUT_DIR  # 이전에 작성한 모듈을 불러옵니다.
+from step_1 import IN_DIR, OUT_DIR  
 
 OUT_2_2 = OUT_DIR / f"{Path(__file__).stem}.xlsx"
 
