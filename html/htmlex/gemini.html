@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>타자 연습기</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; padding-top: 50px; }
+        #target-text { font-size: 24px; font-weight: bold; margin-bottom: 20px; color: #333; }
+        #input-field { width: 400px; height: 40px; font-size: 18px; padding: 5px; }
+        #result { margin-top: 20px; font-size: 18px; color: #007bff; }
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+    </style>
+</head>
+<body>
+
+    <h2>타자 연습</h2>
+    <div id="target-text">여기에 나오는 문장을 똑같이 입력하세요.</div>
+    <input type="text" id="input-field" placeholder="입력을 시작하면 타이머가 작동합니다." autofocus>
+    <div id="result"></div>
+
+    <script>
+        const targetText = "coding everybody";
+        const targetDisplay = document.getElementById('target-text');
+        const inputField = document.getElementById('input-field');
+        const resultDisplay = document.getElementById('result');
+
+        targetDisplay.innerText = targetText;
+
+        let startTime;
+        let isStarted = false;
+
+        inputField.addEventListener('input', () => {
+            if (!isStarted) {
+                startTime = new Date().getTime();
+                isStarted = true;
+            }
+
+            const currentInput = inputField.value;
+
+            if (currentInput === targetText) {
+                const endTime = new Date().getTime();
+                const totalTime = ((endTime - startTime) / 1000).toFixed(2);
+                
+                resultDisplay.innerHTML = `<span class="success">정확히 입력했습니다! 소요 시간: ${totalTime}초</span>`;
+                inputField.disabled = true;
+            } else if (targetText.startsWith(currentInput)) {
+                resultDisplay.innerHTML = "입력 중...";
+                resultDisplay.className = "";
+            } else {
+                resultDisplay.innerHTML = '<span class="error">오타가 있습니다!</span>';
+            }
+        });
+    </script>
+
+</body>
+</html>
