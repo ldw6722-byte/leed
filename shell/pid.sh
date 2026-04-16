@@ -1,0 +1,2 @@
+echo "pid is $$"
+
