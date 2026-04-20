@@ -107,12 +107,71 @@
 #     num+=num[i]
 # print(sum)
 # ========================================
-a = int(input())
+# a = int(input())
 
-for i in range(1, a + 1):
-    x = input()
-    if x.isupper():
-        re = "대문자"
-    else:
-        re = "소문자"
-    print(f"#{i} {x} 는 {re} 입니다.")
+# for i in range(1, a + 1):
+#     x = input()
+#     if x.isupper():
+#         re = "대문자"
+#     else:
+#         re = "소문자"
+#     print(f"#{i} {x} 는 {re} 입니다.")
+# ==========================================
+# 1. 9355
+# num = []
+# for i in range(5):
+#     a = int(input())
+#     num.append(a)
+    
+# print(num)
+# for i in num:
+#     print(i, end=' ')
+# =========================================
+# sw
+# list = ["가위", "바위", "보"]
+# Man1 = input().strip()
+# Man2 = input().strip()
+
+# if Man1 == Man2:
+#     print("Result : Draw")
+# elif (Man1 == "가위" and Man2 == "보") or \
+#      (Man1 == "바위" and Man2 == "가위") or \
+#      (Man1 == "보" and Man2 == "바위"):
+#     print("Result : Man1 Win!")
+# else:
+#     print("Result : Man2 Win!")
+# ============================================
+# 9356
+# numbers = [1, 2, 3, 4, 5]
+
+# last_num = numbers.pop()
+# print(f"last: {last_num}")
+# print(numbers)
+# print(f"len: {len(numbers)}")
+# print()
+# second_item = numbers.pop(1)
+# print(f"second: {second_item}")
+# print(numbers)
+# print(f"len: {len(numbers)}")
+# ---------------------------------------
+# 9369
+# result = []
+
+# while True:
+#     num = int(input())
+#     if num == -1:
+#         break
+#     result.append(num)
+
+# print(*(result[-3:]))
+# ------------------------------
+# 9390
+a = int(input())
+b = int(input())
+
+print(f"{a:02}:{b:02}")
+
+
+
+
+
