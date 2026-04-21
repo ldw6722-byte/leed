@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <img id="image" src="bitcon.jpg" width="300" height="200">
+        <script>
+        function changeImage() {
+            var img = document.getElementById("image");
+            if (img.src.match("bitcon.jpg")) {
+                img.src = "gag.jpg";
+            } else {
+                img.src = "bitcon.jpg";
+            }
+        }
+        </script>
+            <input type="button" onclick="changeImage()" value="click!"/>
+    </body>
+</html>

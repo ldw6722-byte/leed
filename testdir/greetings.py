@@ -1,2 +1,2 @@
-import oraacledb
-from person
+import oracledb
+

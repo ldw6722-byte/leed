@@ -166,12 +166,73 @@
 # print(*(result[-3:]))
 # ------------------------------
 # 9390
-a = int(input())
-b = int(input())
+# a = int(input())
+# b = int(input())
 
-print(f"{a:02}:{b:02}")
+# print(f"{a:02}:{b:02}")
+# ==============================
+#1. 9268
+# N = int(input())
 
+# for i in range(N, 4, -1):
+#     print(i)
+#2. -------------------------
+# N = int(input())
+# while 5<=N:
+#     print(N)
+#     N = N-1
+# #-------------------------------- 
+# n = int(input())
+# # print(n)
+# print('\n'.join(map(str, range(n, 4, -1))))
+# ==============================================
+# 9460
+# a, b = map(int, input().split())
+# # print(a, b)
+# def swap_local(a, b):
+#     a, b = b, a
+#     print(f"함수 내부: a = {a}, b = {b}")
 
+# def swap_global():
+#     global a, b
+#     a, b = b, a
+#     print(f"함수 내부: a = {a}, b = {b}")
 
+# swap_local(a, b)
+# print(f"함수 외부: a = {a}, b = {b}")
 
+# swap_global()
+# print(f"함수 외부: a = {a}, b = {b}")
+# =============================================
+# 9491
+# a = 0
+# b = 0
 
+# def num ():
+#     global a, b
+#     if a>b:
+#       a = a // 2
+#       b  = b * 2 
+#     else:
+#       a = a * 2
+#       b = b // 2  
+
+# a, b = map(int,input().split())
+# num()
+# print(a, b)
+# ==============================
+# beginner 1291
+
+while True:
+    a, b = map(int, input().split())
+    if 2 <= a <= 9 and 2 <= b <= 9:
+        step = 1 if a <= b else -1
+        gugudan = range(a, b + step, step)
+        
+        for i in range(1, 10):
+            line = [f"{nums} * {i} = {nums * i:2d}" for nums in gugudan]
+            print("   ".join(line))
+        break
+    else:
+        print("INPUT ERROR!")
+                

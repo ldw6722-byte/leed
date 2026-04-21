@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="btn-primary" />
+            <script>
+                function checkNotEmpty(field) {
+                    if(field.value.lenght == 0){
+                        alert("Input your name.");
+                        field.focus();
+                    }else{
+                        alert(field.value);
+                    }
+                    return true;
+                }
+            </script>
+    </head>
+        <body>
+            <from>
+                Name : <input type='text' id='user' />
+                <input type='button' onclick="checkNotEmpty(document.getElementById('user'))"
+                value='OK' />
+            </from>
+        </body>
+</html>
