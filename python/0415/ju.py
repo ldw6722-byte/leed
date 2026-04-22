@@ -223,16 +223,51 @@
 # ==============================
 # beginner 1291
 
-while True:
-    a, b = map(int, input().split())
-    if 2 <= a <= 9 and 2 <= b <= 9:
-        step = 1 if a <= b else -1
-        gugudan = range(a, b + step, step)
+# while True:
+#     a, b = map(int, input().split())
+#     if 2 <= a <= 9 and 2 <= b <= 9:
+#         step = 1 if a <= b else -1
+#         gugudan = range(a, b + step, step)
         
-        for i in range(1, 10):
-            line = [f"{nums} * {i} = {nums * i:2d}" for nums in gugudan]
-            print("   ".join(line))
-        break
+#         for i in range(1, 10):
+#             line = [f"{nums} * {i} = {nums * i:2d}" for nums in gugudan]
+#             print("   ".join(line))
+#         break
+#     else:
+#         print("INPUT ERROR!")
+# ==========================================
+# 9702
+# class per:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = int(age)
+#     def print(self):
+#         print(f"Name:{self.name}, Age:{self.age}")
+
+# n = int(input())
+# lst = []
+
+# for i in range(n):
+#     name, age = input().split()
+#     p = per(name, age)
+#     lst.append(p)
+
+# for i in range(len(lst)):
+#     for j in range(i + 1, len(lst)):
+#         if lst[i].age < lst[j].age:
+#             lst[i], lst[j] = lst[j], lst[i]
+
+# for p in lst:
+#     p.print()
+# ===============================
+# 9278
+while True:
+    num = int(input())
+    if num == 1:
+        print('one')
+    elif num == 2:
+        print('two')
+    elif num == 3:
+        print('three')
     else:
-        print("INPUT ERROR!")
-                
+        break           

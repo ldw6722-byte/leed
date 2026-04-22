@@ -93,3 +93,46 @@
 #     if anonym == start:
 #         break
 # print(count)
+# ============================================
+# 2440
+# N = int(input())
+
+# for i in range(N, 0, -1):
+#     for j in range(i):
+#         print('*', end='')
+#     print()
+# # ----------------------------------------
+# N = int(input())
+# for i in range(N):
+#     for j in range(0, N-i):
+#         print('*', end='')
+#     print()  
+# # -------------------------------------
+# n = int(input())
+# for i in range(n,0,-1):
+#     print('*'*i)
+# # -----------------------------------
+# N = int(input())
+# # print(N)
+# stars = "*" * N
+
+# for i in range(N):
+#     print(stars[:N - i])
+# ==============================================
+# 2441
+# N = int(input())
+
+# for i in range(N):
+    
+#     sp = " " * i
+    
+#     stars = "*" * (N - i)
+    
+#     print(sp + stars)
+# =================================
+# 2739
+
+n = int (input())
+# print(n)
+for i in range(1, 10):
+    print(n, "*", i, "=", n * i)
