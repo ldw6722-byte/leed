@@ -261,13 +261,36 @@
 #     p.print()
 # ===============================
 # 9278
-while True:
-    num = int(input())
-    if num == 1:
-        print('one')
-    elif num == 2:
-        print('two')
-    elif num == 3:
-        print('three')
-    else:
-        break           
+# while True:
+#     num = int(input())
+#     if num == 1:
+#         print('one')
+#     elif num == 2:
+#         print('two')
+#     elif num == 3:
+#         print('three')
+#     else:
+#         break           
+# ================================
+# 9233
+# a = int(input())
+# b = int(input())
+
+# if a >= 3 and b >= 3:
+#     print("High")
+# elif a >= 3 or b >= 3:
+#     print("Mid")
+# else:
+#     print("Low")
+# =================================
+# 9391
+h, m = map(int, input().split())
+if h >= 12:
+    pe = "PM"
+else:
+    pe = "AM"
+if h >= 13:
+    fine = h - 12
+else:
+    fine = h
+print(f"{fine:02} : {m:02} {pe}")
