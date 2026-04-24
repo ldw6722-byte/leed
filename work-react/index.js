@@ -5,4 +5,3 @@ const uniqueArr = lodash.uniqBy(arr);
 
 console.log(uniqueArr);
 
-// [1, 2, 4, 3]

@@ -1,4 +1,16 @@
-# # 
+
+
+
+
+# n, m = map(int, input().split())
+
+# num = 1
+# for i in range(n):
+#     for j in range(m):
+#         print(num, end=' ')
+#         num += 1
+#     print()
+# ========================================== 
 # S = int(input())
 # E = int(input())
 # step = 1
@@ -284,13 +296,23 @@
 #     print("Low")
 # =================================
 # 9391
-h, m = map(int, input().split())
-if h >= 12:
-    pe = "PM"
+# h, m = map(int, input().split())
+# if h >= 12:
+#     pe = "PM"
+# else:
+#     pe = "AM"
+# if h >= 13:
+#     fine = h - 12
+# else:
+#     fine = h
+# print(f"{fine:02} : {m:02} {pe}")
+# =======================================
+# 9234
+x, y = map(float, input().split())
+
+if x >= 4.0 and y >= 4.0:
+    print("A grade")
+elif x >= 3.0 and y >= 3.0:
+    print("B grade")
 else:
-    pe = "AM"
-if h >= 13:
-    fine = h - 12
-else:
-    fine = h
-print(f"{fine:02} : {m:02} {pe}")
+    print("F grade")

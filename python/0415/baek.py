@@ -1,3 +1,26 @@
+# 9012
+T = int(input())
+
+for _ in range(T):
+    ps = input()
+    count = 0
+    is_vps = True
+    
+    for char in ps:
+        if char == '(':
+            count += 1
+        else:
+            count -= 1
+        
+        if count < 0:
+            is_vps = False
+            break
+            
+    if is_vps and count == 0:
+        print("YES")
+    else:
+        print("NO")
+# ===============================
 # a = int(input())
 
 # for i in range(1, a + 1):
@@ -132,7 +155,18 @@
 # =================================
 # 2739
 
-n = int (input())
+# n = int (input())
+# # print(n)
+# for i in range(1, 10):
+#     print(n, "*", i, "=", n * i)
+# =================================
+n = int(input())
 # print(n)
-for i in range(1, 10):
-    print(n, "*", i, "=", n * i)
+r, g, b = map(int, input().split())
+
+for x in range(n - 1):
+    nr, ng, nb = map(int, input().split())
+    
+    r, g, b = nr + min(g, b), ng + min(r, b), nb + min(r, g)
+
+print(min(r, g, b))
