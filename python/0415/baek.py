@@ -1,25 +1,43 @@
-# 9012
-T = int(input())
+N, M = map (int,input().split())
+# print(N, M)
+bk = [0] * N
 
-for _ in range(T):
-    ps = input()
-    count = 0
-    is_vps = True
+for q in range(M):
+    i, j, k = map(int, input().split())
+    for index in range(i -1, j):
+        bk[index] = k
+print(*(bk))        
+
+# 10810
+# num = []
+# for i in range(10):
+#     n = int(input())
+#     num.append(n%42)
+# re_nums = set(num)
+# print(len(re_nums))
+# ================================
+# 9012
+# T = int(input())
+
+# for _ in range(T):
+#     ps = input()
+#     count = 0
+#     is_vps = True
     
-    for char in ps:
-        if char == '(':
-            count += 1
-        else:
-            count -= 1
+#     for char in ps:
+#         if char == '(':
+#             count += 1
+#         else:
+#             count -= 1
         
-        if count < 0:
-            is_vps = False
-            break
+#         if count < 0:
+#             is_vps = False
+#             break
             
-    if is_vps and count == 0:
-        print("YES")
-    else:
-        print("NO")
+#     if is_vps and count == 0:
+#         print("YES")
+#     else:
+#         print("NO")
 # ===============================
 # a = int(input())
 

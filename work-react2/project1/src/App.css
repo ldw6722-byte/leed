@@ -1,0 +1,25 @@
+body {
+  padding: 20px;
+}
+
+.App {
+  margin: 0 auto;
+  width: 500;
+}
+
+.App > section {
+  padding: 20px;
+  background-color: rgb(235, 184, 216);
+  border: 1px solid rgb(69, 4, 71);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #a4e4b3;      
+  color: rgb(145, 9, 150);         
+  border: 1px solid #d640a7;         
+  border-radius: 25px;            
+  padding: 12px 20px;           
+  cursor: pointer;               
+}

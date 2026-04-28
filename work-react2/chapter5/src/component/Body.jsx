@@ -1,9 +1,27 @@
-function Body ({ name, location }) {
-    console.log(name, location);
-    return ( 
-        <div className= "body">
-        {name}은 {location} 에 거주합니다.
-        </div>
+import { useRef, useState } from "react";
+import "./Body.css";
+function Body() {
+  const [text, setText] = useState("");
+  const textRef = useRef();
+
+  const handleOnChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const handleOnClick = () => {
+    if (text.length < 5) {
+      textRef.current.focus(); 
+    } else {
+      alert(text);
+      setText(""); 
+    }
+  };
+
+  return (
+    <div>
+      <input ref={textRef} value={text} onChange={handleOnChange} />
+      <button onClick={handleOnClick}>작성 완료</button>
+    </div>
   );
 }
 export default Body;

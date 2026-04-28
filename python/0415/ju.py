@@ -1,7 +1,62 @@
+N = int(input())
+arr = list(map(int, input().split()))
 
+for i in range(N - 1):
+    for j in range(N - 1 - i):
+        if arr[j] > arr[j + 1]:
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    print(arr)
+# 9462
+# ========================================
+# nums = [int(input()) for x in range(5)]
+# print(nums)
 
+# nums = nums[:-2]
 
+# print(nums)
+# # --------------------------------
+# # 9357
+# num = []
+# for i in range(5):
+#     num.append(int(input()))
 
+# print(num)
+# num = num[:-2]
+# print(num)
+# ===================================================
+# word = input()
+
+# print(word)
+# if word == word[::-1]:
+#     print("입력하신 단어는 회문(Palindrome)입니다.")
+# =================================
+# class Point:
+#     def __init__(self, x, y):
+#         self.x = float(x)
+#         self.y = float(y)
+    
+#     def a(self, other):
+#         return Point
+# lst = []
+# for i in range(2):
+
+# =========================================
+# n, m = map(int, input().split())
+
+# for i in range(n):
+#     if i % 2 == 0:
+#         for j in range(1, m + 1):
+#             print(i * m + j, end=' ')
+#     else:
+#         for j in range(m, 0, -1):
+#             print(i * m + j, end=' ')
+#     print()
+# =======================
+# a = int(input())
+# # print(a)
+# b = int(input())
+# print(a-b)
+# =================================
 # n, m = map(int, input().split())
 
 # num = 1
@@ -308,11 +363,11 @@
 # print(f"{fine:02} : {m:02} {pe}")
 # =======================================
 # 9234
-x, y = map(float, input().split())
+# x, y = map(float, input().split())
 
-if x >= 4.0 and y >= 4.0:
-    print("A grade")
-elif x >= 3.0 and y >= 3.0:
-    print("B grade")
-else:
-    print("F grade")
+# if x >= 4.0 and y >= 4.0:
+#     print("A grade")
+# elif x >= 3.0 and y >= 3.0:
+#     print("B grade")
+# else:
+#     print("F grade")
