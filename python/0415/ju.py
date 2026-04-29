@@ -1,11 +1,64 @@
-N = int(input())
-arr = list(map(int, input().split()))
+def solution(answers):
+    p1 = [1, 2, 3, 4, 5]
+    p2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    p3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    scores = [0, 0, 0]
+# n = int(input())
 
-for i in range(N - 1):
-    for j in range(N - 1 - i):
-        if arr[j] > arr[j + 1]:
-            arr[j], arr[j + 1] = arr[j + 1], arr[j]
-    print(arr)
+# for i in range(1, n + 1):
+#     if n % i == 0:
+#         print(f"{i}(은)는 {n}의 약수입니다.")
+# sw
+# def bubble_sort(arr, n):
+#     if n == 1:
+#         return
+
+#     for j in range(len(arr) - (len(arr) - n + 1)):
+#         if arr[j] < arr[j + 1]:
+#             arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    
+#     print(*(arr))
+    
+#     bubble_sort(arr, n - 1)
+
+# nums = list(map(int, input().split()))
+# bubble_sort(nums, len(nums))
+
+# ---------------------------------------------
+# nums = list(map(int, input().split()))
+
+# n = len(nums)
+# for i in range(n - 1):
+#     for j in range(n - 1 - i):
+#         if nums[j] < nums[j + 1]:
+#             nums[j], nums[j + 1] = nums[j + 1], nums[j]
+    
+#     print(*(nums))
+# ------------------------------------------
+# num = list(map(int, input().split()))
+# n = len(num)
+# for i in range(n-1):
+#     for j in range(n -1 -i):
+#         if num[j] < num[j + 1]:
+#             num[j], num[j + 1] = num[j + 1], num[j]
+#     print(*(num))
+# 9463
+# ===========================================
+# S = int(input())
+# E = int(input())
+# K = int(input())
+# for i in range(S, E+1, K):
+#     print(i)
+# ==========================================
+# 9298
+# N = int(input())
+# arr = list(map(int, input().split()))
+
+# for i in range(N - 1):
+#     for j in range(N - 1 - i):
+#         if arr[j] > arr[j + 1]:
+#             arr[j], arr[j + 1] = arr[j + 1], arr[j]
+#     print(arr)
 # 9462
 # ========================================
 # nums = [int(input()) for x in range(5)]
