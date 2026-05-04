@@ -1,8 +1,58 @@
-def solution(answers):
-    p1 = [1, 2, 3, 4, 5]
-    p2 = [2, 1, 2, 3, 2, 4, 2, 5]
-    p3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
-    scores = [0, 0, 0]
+N = int(input())
+nums = list(map(int, input().split()))
+
+for i in range(N - 1):
+    min_idx = i
+    for j in range(i + 1, N):
+        if nums[j] < nums[min_idx]:
+            min_idx = j
+    
+    nums[i], nums[min_idx] = nums[min_idx], nums[i]
+    
+    print(*(nums))
+# 1146
+# T = int(input())
+
+# for tc in range(1, T + 1):
+#     j = int(input())
+#     nums = list(map(int, input().split()))
+#     result = max(nums) - min(nums)
+#     print(f"#{tc} {result}")
+# sw4828
+# ============================================
+# n = int(input())
+
+# for i in range(1, n + 1):
+#     for j in range(n):
+#         print(i + (j * n), end=' ')
+#     print()
+# 1304
+# name = input()
+# age = int(input())
+
+# year = 2026 + (100 - age) - 1
+
+# print(f"{name}(은)는 {year}년에 100세가 될 것입니다.")
+
+# sw6308
+# for i in range(3, 0, -1):
+#     print('*' * i)
+
+# for i in range(2, 4):
+#     print('*' * i)
+# 9327
+# =====================================
+# 9323
+# for i in range(1, 4):
+#     for j in range(i):
+#         print('*', end='')
+#     print()
+# 9324
+# def solution(answers):
+#     p1 = [1, 2, 3, 4, 5]
+#     p2 = [2, 1, 2, 3, 2, 4, 2, 5]
+#     p3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+#     scores = [0, 0, 0]
 # n = int(input())
 
 # for i in range(1, n + 1):
