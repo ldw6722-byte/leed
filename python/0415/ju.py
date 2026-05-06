@@ -1,15 +1,20 @@
-N = int(input())
-nums = list(map(int, input().split()))
+def solution(numbers):
+    answer = []
+    for num in numbers:
+        answer.append(num * 2)
+    return answer
+# N = int(input())
+# nums = list(map(int, input().split()))
 
-for i in range(N - 1):
-    min_idx = i
-    for j in range(i + 1, N):
-        if nums[j] < nums[min_idx]:
-            min_idx = j
+# for i in range(N - 1):
+#     min_idx = i
+#     for j in range(i + 1, N):
+#         if nums[j] < nums[min_idx]:
+#             min_idx = j
     
-    nums[i], nums[min_idx] = nums[min_idx], nums[i]
+#     nums[i], nums[min_idx] = nums[min_idx], nums[i]
     
-    print(*(nums))
+#     print(*(nums))
 # 1146
 # T = int(input())
 
