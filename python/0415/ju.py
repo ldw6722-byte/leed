@@ -1,8 +1,38 @@
-def solution(numbers):
+def solution(my_str, n):
     answer = []
-    for num in numbers:
-        answer.append(num * 2)
+    for i in range(0, len(my_str), n):
+        answer.append(my_str[i:i+n])
     return answer
+# def solution(my_string):
+#     answer = []
+#     for char in my_string:
+#         if char.isdigit():
+#             answer.append(int(char))
+#     answer.sort()
+#     return answer
+# ===================================
+# def solution(array, height):
+#     answer = 0
+#     for fr in array:
+#         if fr > height:
+#             answer = answer + 1
+#     return answer
+# =====================================
+# n = int(input())
+# num = 1
+# for i in range(1, n + 1):
+#     line = []
+#     for x in range(i):
+#         line.append(num)
+#         num += 1
+# print(n)
+
+# 5945
+# def solution(numbers):
+#     answer = []
+#     for num in numbers:
+#         answer.append(num * 2)
+#     return answer
 # N = int(input())
 # nums = list(map(int, input().split()))
 
