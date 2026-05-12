@@ -1,16 +1,30 @@
-def solution(letter):
-    morse = {
-        '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
-        '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
-        '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
-        '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
-        '-.--':'y','--..':'z'
-    }
-    answer = ''
-    words = letter.split(' ')
-    for word in words:
-        answer += morse[word]
+def solution(my_string):
+    answer = "".join(sorted(my_string.lower()))
     return answer
+# ===============================
+# def solution(num_list):
+#     ab = 0
+#     cd = 0
+#     answer = []
+#     for i in num_list:
+#        if i % 2 == 0:
+#         ab = +1
+#         # print(ab)
+
+#     return(ab, cd)
+# def solution(letter):
+#     morse = {
+#         '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+#         '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+#         '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+#         '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+#         '-.--':'y','--..':'z'
+#     }
+#     answer = ''
+#     words = letter.split(' ')
+#     for word in words:
+#         answer += morse[word]
+#     return answer
 # =================================
 # T = int(input())
 
