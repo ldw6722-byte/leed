@@ -68,7 +68,7 @@ function App() {
 
   useEffect(() => {
     dispatch({
-      type: "INIT",
+      type: "INIT", 
       data: mockData,
     });
     setIsDataLoaded(true);

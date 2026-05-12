@@ -1,8 +1,121 @@
-def solution(my_str, n):
-    answer = []
-    for i in range(0, len(my_str), n):
-        answer.append(my_str[i:i+n])
+def solution(letter):
+    morse = {
+        '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+        '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+        '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+        '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+        '-.--':'y','--..':'z'
+    }
+    answer = ''
+    words = letter.split(' ')
+    for word in words:
+        answer += morse[word]
     return answer
+# =================================
+# T = int(input())
+
+# for t in range(1, T + 1):
+#     str1 = input()
+#     str2 = input()
+    
+#     result = 0
+#     if str1 in str2:
+#         result = 1
+        
+#     print(f"#{t} {result}")
+# sw4864
+# =====================================
+# T = int(sys.stdin.readline())
+
+# for t in range(1, T + 1):
+#     s = sys.stdin.readline().strip()
+#     stack = []
+
+#     for char in s:
+#         if stack and stack[-1] == char:
+#             stack.pop()
+#         else:
+#             stack.append(char)
+            
+#     print(f"#{t} {len(stack)}")
+# def xy(n):
+#     num = 1
+#     for i in range(n):
+#         for j in range(n):
+#             print(num, end=' ')
+#             num += 1
+#         print()
+
+# n = int(input())
+# xy(n)
+# 9466
+# ===================================
+# A = []
+# for i in range(5):
+#     num = int(input())
+#     A.append(num)
+
+# B = A[:]
+# C = A[::-1]
+
+# print(C)
+
+# for i in range(3):
+#     num = int(input())
+#     B.append(num)
+
+# print(B)
+# print(A)
+# 7103
+# =========================================
+# def solution(age):
+#     answer = ''
+#     alphabet = 'abcdefghij'
+    
+#     for i in str(age):
+#         answer += alphabet[int(i)]
+        
+#     return answer
+# ============================================
+# def solution(dots):
+#     a, b, c, d = dots
+    
+#     def get_slope(p1, p2):
+#         return (p2[1] - p1[1]) / (p2[0] - p1[0])
+    
+#     if get_slope(a, b) == get_slope(c, d):
+#         return 1
+#     if get_slope(a, c) == get_slope(b, d):
+#         return 1
+#     if get_slope(a, d) == get_slope(b, c):
+#         return 1
+    
+#     return 0
+# def solution(emergency):
+#     answer = []
+#     sorted_list = sorted(emergency, reverse=True)
+    
+#     for i in emergency:
+#         answer.append(sorted_list.index(i) + 1)
+        
+#     return answer
+# ==========================================
+# def solution(num_str):
+#     answer = 0
+#     for i in num_str:
+#         answer += int(i)
+#         return answer        
+# =======================================================================
+# def solution(numbers):
+#     words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+#     for i in range(len(words)):
+#         numbers = numbers.replace(words[i], str(i))
+#     return int(numbers)
+# def solution(my_str, n):
+#     answer = []
+#     for i in range(0, len(my_str), n):
+#         answer.append(my_str[i:i+n])
+#     return answer
 # def solution(my_string):
 #     answer = []
 #     for char in my_string:
